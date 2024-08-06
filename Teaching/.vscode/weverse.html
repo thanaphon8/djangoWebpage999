@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weverse - KARINA</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .weverse-logo {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #00FFF0;
+            text-transform: lowercase;
+            letter-spacing: -1px;
+        }
+        .header-gradient {
+            background: linear-gradient(to right, #a18cd1, #fbc2eb);
+        }
+        .nav-link {
+            color: white !important;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .content-tabs .nav-link.active {
+            color: #00FFF0 !important;
+            border-bottom: 2px solid #00FFF0;
+        }
+        .content-tabs .nav-link {
+            color: #000 !important;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-gradient">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand weverse-logo" href="#">weverse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                aespa
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bell"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gear"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand">
+            <div class="container">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Feed</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Artist</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">LIVE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="d-flex align-items-center mb-4">
+                    <img src="https://via.placeholder.com/100" alt="KARINA" class="profile-pic me-3">
+                    <div>
+                        <h1 class="mb-0">KARINA</h1>
+                        <p class="text-muted">2000.04.11</p>
+                    </div>
+                    <button class="btn btn-outline-secondary ms-auto">Following</button>
+                </div>
+
+                <ul class="nav content-tabs mb-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Comments</a>
+                    </li>
+                </ul>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/40" alt="KARINA" class="rounded-circle me-2">
+                            <div>
+                                <strong>KARINA</strong>
+                                <p class="text-muted mb-0">04. 12. 12:10</p>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/600x400" alt="Post image" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
