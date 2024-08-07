@@ -16,4 +16,14 @@ def contactUs(request):
 
 
 def forPage(request):
-    return render(request, 'for_test.html')
+    context = {}
+    lt = list(range(0, 100))
+    context["list"] = lt
+    return render(request, 'for_test.html', context)
+
+
+def cardView(request):
+    context = {}
+    lt = list(range(0, 100))
+    context["list"] = lt
+    return render(request, 'card.html', context)
