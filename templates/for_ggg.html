@@ -2,8 +2,14 @@
 <div class="container">
   <h1 class="mt-4">ฟอร์มสำหรับส่งข้อมูล</h1>
 
-  <h1>{{ email }}</h1>
-  <h1>{{ password }}</h1>
+  {% if email or password %}
+    <div class="mb-4 mt-4">
+        <h5>Submitted Data</h5>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Password:</strong> {{ password }}</p>
+    </div>
+    {% endif %}
+</div>
 
   <table class="table">
     <form action="" method="POSt">
