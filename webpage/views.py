@@ -72,6 +72,3 @@ def registerPage(request):
 
 def page2(request):
     return render(request, 'page2.html')
-
-def test(request):
-    return render(request, 'test.html')
