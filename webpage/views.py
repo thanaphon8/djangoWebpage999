@@ -68,3 +68,7 @@ def loginPage(request):
 
 def registerPage(request):
     return render(request, 'register.html')
+
+
+def page2(request):
+    return render(request, 'page2.html')

@@ -11,4 +11,5 @@ urlpatterns = [
     path("forggg/", views.forGGG, name="for-test"),
     path("login/", views.loginPage, name="login-page"),
     path("register/", views.registerPage, name="register-page"),
+    path("page2/", views.page2, name='page2'),
 ]
