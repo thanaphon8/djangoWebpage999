@@ -6,149 +6,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta
+      name="description"
+      content="สาขาวิทยาการคอมพิวเตอร์ - สร้างอนาคตดิจิทัลกับเรา"
+    />
+    <title>สาขาวิทยาการคอมพิวเตอร์</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@900&display=swap");
-
       body {
-        font-family: "Sarabun", sans-serif;
-        line-height: 1.6;
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #ffffff;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        text-align: center;
+        margin: 20px 0;
+      }
+      nav a {
+        text-decoration: none;
+        color: #4caf50;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+      nav a:hover {
         color: #333;
       }
       .container {
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        text-align: left; /* เพิ่มการจัดวางข้อความชิดซ้าย */
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
       }
-      .header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-      .header h1 {
-        font-size: 2.5em;
-        margin: 0;
-        font-weight: 900; /* ปรับน้ำหนักตัวหนังสือ */
-      }
-      .header img {
-        margin-left: 10px;
-        width: 24px;
-        height: 24px;
-      }
-      .birthdate {
-        display: flex;
-        align-items: center;
-        font-size: 1em;
-        color: #555;
-        margin-top: 5px;
-      }
-      .birthdate img {
-        margin-right: 5px;
-        width: 16px;
-        height: 16px;
-      }
-      h2 {
-        font-size: 1.5em;
-        margin-top: 1.5em;
-        margin-bottom: 0.5em;
-        color: #555;
-      }
-      .section {
+      .hero {
+        background-color: #e0f7fa;
+        padding: 50px;
+        text-align: center;
         margin-bottom: 30px;
       }
-      ul {
-        padding-left: 20px;
+      .hero h1 {
+        margin: 0;
+        font-size: 48px;
       }
-      li {
-        margin-bottom: 5px;
-      }
-      hr {
-        border: none;
-        border-top: 1px solid #ccc;
+      .hero p {
+        font-size: 20px;
         margin: 20px 0;
       }
-      @media (max-width: 600px) {
-        body {
-          font-size: 16px;
-        }
-        .header h1 {
-          font-size: 2em;
-        }
-        h2 {
-          font-size: 1.3em;
-        }
+      .features {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+      }
+      .feature {
+        background-color: #fff;
+        padding: 20px;
+        width: 30%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .feature h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .cta {
+        text-align: center;
+        margin: 40px 0;
+      }
+      .cta a {
+        padding: 15px 30px;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 5px;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
       }
     </style>
   </head>
   <body>
+    <header>
+      <h1>สาขาวิทยาการคอมพิวเตอร์</h1>
+      <p>เรียนรู้ พัฒนา และเติบโตในโลกดิจิทัล</p>
+    </header>
+
+    <nav>
+      <a href="#">หน้าแรก</a>
+      <a href="#">เกี่ยวกับเรา</a>
+      <a href="#">หลักสูตร</a>
+      <a href="#">ติดต่อเรา</a>
+    </nav>
+
     <div class="container">
-      <div class="header">
-        <h1>THANAPHON</h1>
-      </div>
-      <div class="birthdate">
-        <img
-          src="https://img.icons8.com/ios-glyphs/30/000000/birthday-cake.png"
-          alt="birthday icon"
-        />
-        <span>2004.09.21</span>
-      </div>
-
-      <hr />
-
-      <div class="section fw-bold">
-        <h2>ข้อมูลส่วนตัว</h2>
+      <div class="hero">
+        <h1>ร่วมสร้างอนาคตด้วยเทคโนโลยี</h1>
         <p>
-          วันเกิด: 2004.09.21<br />
-          ที่อยู่: [ที่อยู่ปัจจุบัน]<br />
-          อีเมล: [อีเมล]
+          สาขาวิทยาการคอมพิวเตอร์ของเรามุ่งเน้นให้คุณพร้อมสำหรับโลกดิจิทัลและการเปลี่ยนแปลงเทคโนโลยี
         </p>
       </div>
 
-      <hr />
-
-      <div class="section">
-        <h2>การศึกษา</h2>
-        <ul>
-          <li>[ระดับการศึกษา] [ชื่อสถาบัน] ([ปีที่จบการศึกษา])</li>
-          <li>[ระดับการศึกษา] [ชื่อสถาบัน] ([ปีที่จบการศึกษา])</li>
-        </ul>
+      <div class="features">
+        <div class="feature">
+          <h3>หลักสูตรที่ครอบคลุม</h3>
+          <p>
+            ครอบคลุมทั้งการเขียนโปรแกรม อัลกอริทึม วิทยาการข้อมูล
+            และเทคโนโลยีคลาวด์
+          </p>
+        </div>
+        <div class="feature">
+          <h3>คณาจารย์คุณภาพ</h3>
+          <p>อาจารย์ที่มีประสบการณ์ทั้งในด้านวิชาการและการทำงานจริง</p>
+        </div>
+        <div class="feature">
+          <h3>โอกาสทางอาชีพ</h3>
+          <p>
+            เปิดประตูสู่อาชีพที่หลากหลายในโลกของเทคโนโลยี เช่น โปรแกรมเมอร์
+            นักวิเคราะห์ข้อมูล และอื่นๆ
+          </p>
+        </div>
       </div>
 
-      <hr />
-
-      <div class="section">
-        <h2>ประสบการณ์การทำงาน</h2>
-        <ul>
-          <li>[ตำแหน่ง], [ชื่อบริษัท] ([ปีที่เริ่ม] - [ปีที่สิ้นสุด])</li>
-          <li>[ตำแหน่ง], [ชื่อบริษัท] ([ปีที่เริ่ม] - [ปีที่สิ้นสุด])</li>
-        </ul>
-      </div>
-
-      <hr />
-
-      <div class="section">
-        <h2>ทักษะและความสามารถ</h2>
-        <ul>
-          <li>[ทักษะ 1]</li>
-          <li>[ทักษะ 2]</li>
-          <li>[ทักษะ 3]</li>
-        </ul>
-      </div>
-
-      <hr />
-
-      <div class="section">
-        <h2>ผลงานและรางวัล</h2>
-        <ul>
-          <li>[ผลงานหรือรางวัล 1]</li>
-          <li>[ผลงานหรือรางวัล 2]</li>
-        </ul>
+      <div class="cta">
+        <a href="#">สมัครเรียนวันนี้!</a>
       </div>
     </div>
+
+    <footer>
+      <p>
+        &copy; 2024 สาขาวิทยาการคอมพิวเตอร์ - มหาวิทยาลัยตัวอย่าง | ติดต่อเรา:
+        123-456-789
+      </p>
+    </footer>
   </body>
 </html>
 

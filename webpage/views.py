@@ -3,6 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 
 
+def testPage(request):
+    return render(request, 'test.html')
+
+
 def indexPage(request):
     return render(request, 'index.html')
 
@@ -56,3 +60,11 @@ def forGGG(request):
     context['password'] = password
 
     return render(request, 'for_ggg.html', context)
+
+
+def loginPage(request):
+    return render(request, 'login.html')
+
+
+def registerPage(request):
+    return render(request, 'register.html')

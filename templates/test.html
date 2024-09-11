@@ -1,0 +1,426 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="iconcslo" href="{% static 'assets/img/cslo.png' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="โปรแกรมวิทยาการคอมพิวเตอร์ เปิดประตูสู่อนาคตที่สร้างสรรค์และนวัตกรรม"
+    />
+    <title>โปรแกรมวิทยาการคอมพิวเตอร์</title>
+    <style>
+      /* Base Styles */
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: 80vh;
+  background-image: url("https://scontent.fbkk2-8.fna.fbcdn.net/v/t39.30808-6/450054923_863881429118803_2906487664665253319_n.jpg?stp=dst-jpg_s960x960&_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHrUEsKF0WUipMxsZOoJIBkqsedekKzGdyqx516QrMZ3IxHpbCu7uwhaUMqb1nOAylrz08qDoC3aoDS87LtV3qk&_nc_ohc=gJqynsXgK38Q7kNvgHSSpQM&_nc_zt=23&_nc_ht=scontent.fbkk2-8.fna&oh=00_AYCbZ6fGDYf8OktWy7cNotjCMSPVrikpA3dPibE_u9ovkg&oe=66E5B388");
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5); /* สีขาวพร้อมความโปร่งใส */
+  background-blend-mode: overlay; /* ผสมพื้นหลังสีขาวกับภาพ */
+  background-position: center;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4em;
+  margin: 0;
+  color: white;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text p {
+  font-size: 1.5em;
+  margin: 10px 0 20px;
+  color: #fffc01;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text a {
+  text-decoration: none;
+  color: white;
+  background-color: #f3c803;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+.hero-text a:hover {
+  background-color: #005bb5;
+}
+
+nav {
+  background-color: #f3c803;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #f3c803;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #f8f410;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta a {
+  text-decoration: none;
+  color: white;
+  background-color: #f3c803;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.cta a:hover {
+  background-color: #005bb5;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.feature,
+.image-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+form {
+  margin-top: 40px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #f3c803;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005bb5;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-text p {
+    font-size: 1.2em;
+  }
+
+  .hero-text a {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .cta a {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .hero-text a {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+
+  .feature {
+    width: 90%;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9em;
+  }
+
+  form button {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="#about">เกี่ยวกับสาขา</a>
+      <a href="#projects">ผลงานของนักศึกษา</a>
+      <a href="#inquiry">สอบถามข้อมูล</a>
+      <a href="#apply">สมัครเรียน</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>เรียนรู้กับสาขาวิทยาการคอมพิวเตอร์</h1>
+          <p>เปิดประตูสู่อนาคตทางเทคโนโลยี</p>
+          <a href="#apply">สมัครเรียนเลย</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- About Section -->
+      <section id="about">
+        <h2 style="color: #f3c803">
+          ทำไมถึงต้องเลือกเรียนสาขาวิทยาการคอมพิวเตอร์?
+        </h2>
+        <p>
+          ในยุคที่เทคโนโลยีกำลังก้าวหน้าอย่างรวดเร็ว
+          วิทยาการคอมพิวเตอร์เป็นหนึ่งในสาขาที่มีความสำคัญมากที่สุดในโลก
+          ไม่ว่าคุณจะสนใจด้านปัญญาประดิษฐ์ การพัฒนาแอปพลิเคชัน
+          หรือการรักษาความปลอดภัยทางไซเบอร์ สาขานี้มีคำตอบสำหรับทุกคน
+        </p>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="feature">
+          <h3>ความรู้และทักษะ</h3>
+          <p>
+            เรียนรู้การเขียนโปรแกรม การวิเคราะห์ข้อมูล และการพัฒนาเทคโนโลยีใหม่ๆ
+            ที่จะเปลี่ยนแปลงอนาคต
+          </p>
+        </div>
+        <div class="feature">
+          <h3>การเติบโตของอาชีพ</h3>
+          <p>
+            อาชีพด้านคอมพิวเตอร์กำลังเติบโตอย่างรวดเร็ว
+            ไม่ว่าจะเป็นนักพัฒนาซอฟต์แวร์ วิศวกรเครือข่าย หรือผู้เชี่ยวชาญด้าน
+            AI
+          </p>
+        </div>
+        <div class="feature">
+          <h3>สร้างสรรค์นวัตกรรม</h3>
+          <p>
+            ร่วมเป็นส่วนหนึ่งในการสร้างสรรค์นวัตกรรมที่เปลี่ยนแปลงโลก
+            และพัฒนาเทคโนโลยีที่ทุกคนใช้ในชีวิตประจำวัน
+          </p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 style="color: #f3c803">ตัวอย่างผลงานและโปรเจคของนักศึกษา</h2>
+        <div class="card-container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="container" style="width: 20%;">
+                <img
+                    src="https://i.pinimg.com/736x/37/5b/a3/375ba3cc82480072738807bdfca79d2a.jpg"
+                    class="card-img-top expandable"
+                    alt="..."
+                    style="width: 100%; border: 2px solid #000; border-radius: 8px; transition: transform 0.3s ease;"
+                    onclick="toggleExpand(this)"
+                />
+            </div>
+            <div class="container" style="width: 20%;">
+                <img
+                    src="https://i.pinimg.com/736x/37/5b/a3/375ba3cc82480072738807bdfca79d2a.jpg"
+                    class="card-img-top expandable"
+                    alt="..."
+                    style="width: 100%; border: 2px solid #000; border-radius: 8px; transition: transform 0.3s ease;"
+                    onclick="toggleExpand(this)"
+                />
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        let expandedImg = null;
+    
+        function toggleExpand(img) {
+            // ถ้ามีภาพที่ขยายอยู่ก่อนหน้า ให้ย่อขนาดกลับ
+            if (expandedImg && expandedImg !== img) {
+                expandedImg.style.transform = 'scale(1)';
+            }
+    
+            // ขยายหรือย่อขนาดภาพที่ถูกคลิก
+            if (img.style.transform === 'scale(1.5)') {
+                img.style.transform = 'scale(1)';
+            } else {
+                img.style.transform = 'scale(1.5)';
+            }
+    
+            // เก็บภาพที่ขยายล่าสุด
+            expandedImg = img;
+        }
+    </script>
+    
+      
+      <script>
+        let expandedImg = null; // ตัวแปรสำหรับเก็บรูปที่ถูกขยาย
+      
+        function toggleExpand(img) {
+          // ถ้ามีรูปที่ขยายอยู่แล้ว ให้ย่อมันกลับไปขนาดเดิม
+          if (expandedImg && expandedImg !== img) {
+            expandedImg.classList.remove("expanded");
+          }
+      
+          // ขยายหรือย่อรูปที่ถูกคลิก
+          img.classList.toggle("expanded");
+      
+          // อัพเดตตัวแปร expandedImg เป็นรูปที่ถูกคลิก
+          expandedImg = img.classList.contains("expanded") ? img : null;
+        }
+      </script>
+      
+      <style>
+        .expanded {
+          transform: scale(1.5); /* ขยายรูปภาพ */
+          z-index: 10; /* ให้รูปอยู่ด้านบน */
+        }
+      </style>
+      
+      
+      <script>
+        function toggleExpand(img) {
+          img.classList.toggle("expanded");
+        }
+      </script>
+      
+      <style>
+        .expanded {
+          transform: scale(1.5); /* Enlarges the image by 1.5 times */
+          z-index: 10; /* Ensures the image is on top of other elements */
+        }
+      </style>
+      
+      
+      
+          <div class="card-body">
+          </div>
+        </div>
+      </section>
+
+      <!-- Inquiry Form Section -->
+      <div class="container">
+      <section id="inquiry">
+        <h2 style="color: #f3c803">สอบถามข้อมูลเพิ่มเติม</h2>
+        <form action="#" method="POST">
+          <label for="name">ชื่อของคุณ:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">อีเมล:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">ข้อความ:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">ส่งข้อความ</button>
+        </form>
+      </section>
+
+      <div class="cta" id="apply">
+        <a href="#apply">สมัครเรียนเลย</a>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
